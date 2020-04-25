@@ -13,5 +13,4 @@ You will also see any lint errors in the console.
 
 ### `node server.js`
 
-Runs the server.<br />
-Run on PORT:3000
+Runs the server on PORT:3000.<br />
