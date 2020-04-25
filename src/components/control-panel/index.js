@@ -1,13 +1,9 @@
 import React from 'react';
 import { Input, Button, Content, Title } from './styled';
 import { Form, Field } from "react-final-form";
+import { required, mustBeNumber, composeValidators } from '../../utils';
 
-const ControlPanel = ({ onSubmit, data }) => {  
-  const required = value => (value ? undefined : "Required");
-  const mustBeNumber = value => (isNaN(value) ? "Must be a number" : undefined);
-  const composeValidators = (...validators) => value =>
-    validators.reduce((error, validator) => error || validator(value), undefined);
-
+const ControlPanel = ({ onSubmit }) => {  
   return (
     <Content>
       <Title>ControlPanel</Title>
